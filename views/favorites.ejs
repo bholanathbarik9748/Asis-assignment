@@ -1,0 +1,23 @@
+<!-- favorites.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Favorites</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1>Favorites</h1>
+    <ul>
+        <% favorites.forEach(favorite => { %>
+        <li>
+            <img src="<%= favorite.poster %>" alt="<%= favorite.title %>">
+            <h3><%= favorite.title %></h3>
+            <p><%= favorite.year %> - <%= favorite.type %></p>
+        </li>
+        <% }); %>
+    </ul>
+</body>
+
+</html>
